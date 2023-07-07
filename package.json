@@ -1,0 +1,11 @@
+{
+  "name": "testcafe-repro-old-headless-chromium",
+  "description": "",
+  "version": "1.0.0",
+  "dependencies": {
+    "testcafe": "^3.0.1"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "MIT"
+}
