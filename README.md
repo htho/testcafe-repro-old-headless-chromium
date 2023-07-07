@@ -7,11 +7,16 @@ The simplest solution is to use a portable app.
 
 All portable versions of Google Chrome: <https://sourceforge.net/projects/portableapps/files/Google%20Chrome%20Portable/>
 
-1. downloa i.e. <https://sourceforge.net/projects/portableapps/files/Google%20Chrome%20Portable/GoogleChromePortable_88.0.4324.190_online.paf.exe/download>
-2. store in the root of this repository
-3. execute/"install"
+1. download the portable browsers to `./`
+   * the last version that does not work (Chrome 94): <https://sourceforge.net/projects/portableapps/files/Google%20Chrome%20Portable/GoogleChromePortable_94.0.4606.81_online.paf.exe/download>
+   * the first version that does work (Chrome 95): <https://sourceforge.net/projects/portableapps/files/Google%20Chrome%20Portable/GoogleChromePortable_95.0.4638.69_online.paf.exe/download>
+2. execute the installer and store in `./GoogleChromePortable94/` and `./GoogleChromePortable95/`
 
 ## Run Tests
 
-* "normal": `npx testcafe chromium:.\GoogleChromePortable\GoogleChromePortable.exe .\test.tc.js`
-* headless: `npx testcafe chromium:.\GoogleChromePortable\GoogleChromePortable.exe:headless .\test.tc.js`
+* Chrome 95 works as expected
+  * "normal": `npx testcafe chromium:.\GoogleChromePortable95\GoogleChromePortable.exe .\test.tc.js`
+  * headless: `npx testcafe chromium:.\GoogleChromePortable95\GoogleChromePortable.exe:headless .\test.tc.js`
+* Chrome 94 does not work
+  * "normal" - trows `TypeError`: `npx testcafe chromium:.\GoogleChromePortable94\GoogleChromePortable.exe .\test.tc.js`
+  * headless - does nothing ("hangs"): `npx testcafe chromium:.\GoogleChromePortable94\GoogleChromePortable.exe:headless .\test.tc.js`
